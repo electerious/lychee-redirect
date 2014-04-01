@@ -3,7 +3,7 @@
 /**
  * @author		Tobias Reich
  * @copyright	2014 by Tobias Reich
- * @version		0.0.1
+ * @version		1.0.0
  * @description	Redirect from an album-name to a Lychee-album.
  */
 
