@@ -10,14 +10,12 @@
 define('LYCHEE', true);
 
 # Config
-$lychee		= '../': # Path to the root of Lychee
-$album404	= '../'; # When album not found, redirect to this site
-$name404	= '../'; # When name missing, redirect to this site
+$config = parse_ini_file('config.ini');
 
 # Include
-require($lychee . 'data/config.php');
-require($lychee . 'php/modules/db.php');
-require($lychee . 'php/modules/misc.php');
+require($config['lychee'] . 'data/config.php');
+require($config['lychee'] . 'php/modules/db.php');
+require($config['lychee'] . 'php/modules/misc.php');
 
 # Connect and get settings
 $database	= dbConnect();
@@ -25,7 +23,7 @@ $name		= mysqli_real_escape_string($database, urldecode($_GET['name']));
 
 # Check name
 if (!isset($name)||$name==='') {
-	header("Location: $name404");
+	header('Location: ' . $config['album404']);
 	exit();
 }
 
@@ -36,7 +34,7 @@ $return = $result->fetch_array();
 $id		= $return['id'];
 
 # Redirect to album
-if (!isset($return, $id)) header("Location: $name404");
-else header("Location: $lychee#$id");
+if (!isset($return, $id)) header('Location: ' . $config['name404']);
+else header('Location: ' . $config['lychee'] . '#$id');
 
 ?>
