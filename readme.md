@@ -1,6 +1,6 @@
 # Redirect
 
-Redirect is a plugin for [Lychee](https://github.com/electerious/Lychee), which redirects the user to an album inside Lychee.
+Redirect is a plugin for [Lychee](https://github.com/electerious/Lychee), which redirects the user to an album inside Lychee. Or with other words: It turns an album-name into an album-id.
 
 ## Installation
 
