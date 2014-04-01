@@ -10,7 +10,8 @@
 define('LYCHEE', true);
 
 # Config
-$config = parse_ini_file('config.ini');
+if (file_exists('config.ini')) $config = parse_ini_file('config.ini');
+else exit('Error: config.ini not found');
 
 # Include
 require($config['lychee'] . 'data/config.php');
