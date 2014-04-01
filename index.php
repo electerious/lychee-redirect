@@ -18,9 +18,9 @@ require($config['lychee'] . 'data/config.php');
 require($config['lychee'] . 'php/modules/db.php');
 require($config['lychee'] . 'php/modules/misc.php');
 
-# Connect and get settings
+# Connect and get name
 $database	= dbConnect();
-$name		= mysqli_real_escape_string($database, urldecode($_GET['name']));
+$name		= mysqli_real_escape_string($database, $_GET['name']);
 
 # Check name
 if (!isset($name)||$name==='') {
