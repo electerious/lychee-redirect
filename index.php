@@ -1,11 +1,11 @@
 <?php
 
-/**
- * @author		Tobias Reich
- * @copyright	2014 by Tobias Reich
- * @version		1.0.0
- * @description	Redirect from an album-name to a Lychee-album.
- */
+###
+# @author		Tobias Reich
+# @copyright	2014 by Tobias Reich
+# @version		1.0.0
+# @description	Redirect from an album-name to a Lychee-album.
+###
 
 define('LYCHEE', true);
 
@@ -23,7 +23,7 @@ require($lychee . 'php/modules/misc.php');
 $database	= dbConnect();
 $name		= mysqli_real_escape_string($database, urldecode($_GET['name']));
 
-# Check code
+# Check name
 if (!isset($name)||$name==='') {
 	header("Location: $name404");
 	exit();
