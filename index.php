@@ -36,6 +36,6 @@ $id		= $return['id'];
 
 # Redirect to album
 if (!isset($return, $id)) header('Location: ' . $config['name404']);
-else header('Location: ' . $config['lychee'] . '#$id');
+else header('Location: ' . $config['lychee'] . '#' . $id);
 
 ?>
