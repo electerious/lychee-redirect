@@ -7,19 +7,17 @@
 # @description	Redirect from an album-name to a Lychee-album.
 ###
 
-define('LYCHEE', true);
-
 # Config
 if (file_exists('config.ini')) $config = parse_ini_file('config.ini');
 else exit('Error: config.ini not found');
 
 # Include
+require($config['lychee'] . 'php/define.php');
+require($config['lychee'] . 'php/autoload.php');
 require($config['lychee'] . 'data/config.php');
-require($config['lychee'] . 'php/modules/db.php');
-require($config['lychee'] . 'php/modules/misc.php');
 
 # Connect and get name
-$database	= dbConnect();
+$database	= Database::connect($dbHost, $dbUser, $dbPassword, $dbName);
 $name		= mysqli_real_escape_string($database, $_GET['name']);
 
 # Check name
