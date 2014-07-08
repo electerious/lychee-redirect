@@ -4,7 +4,7 @@ Redirect is a extension for [Lychee](https://github.com/electerious/Lychee), whi
 
 ## Installation
 
-This extension requires a working [Lychee](https://github.com/electerious/Lychee) on your computer or server.
+This extension requires a working [Lychee](https://github.com/electerious/Lychee) v2.5 on your computer or server.
 
 Navigate to the plugin-folder (`plugins/`) of your Lychee and run the following command:
 
