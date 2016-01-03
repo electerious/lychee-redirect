@@ -1,3 +1,5 @@
+> WARNING: This module has been deprecated.
+
 # Redirect
 
 Redirect is an extension for [Lychee](https://github.com/electerious/Lychee), which redirects the user to an album inside Lychee. Or with other words: It turns an album-name into an album-id.
